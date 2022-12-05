@@ -1,0 +1,102 @@
+
+
+  <form class="modal-content" action="/action_page.php"  #contactForm ="ngForm">
+   
+    <p><b>Please fill in this form to create Wheel Chair.</b></p>
+    
+    <label for="state"><b>State</b></label>
+    <select type="State" class="form-control"  id="inputState" ngModel name="State" required>
+        <option value="Moving">Moving</option>
+        <option value="Stop">Stop</option>
+        <option value="Charging">Charging</option>
+        
+    </select>
+
+
+
+<div>
+    <hr>
+   <label for="Obstacle"><b>Obstacle</b></label>
+ <select type="Obstacle" class="form-control" (change)="check(os.value)" #os id="inputObstacle" ngModel name="Obstacle" required>
+    <option value="False">False</option>    
+    <option value="True">True</option>
+     
+  </select>
+</div>
+    
+    <div>
+        
+        
+            <label for="Sense free space"><b>Sense free space</b></label>
+            <select type="Sense free space" [disabled]="!space" class="form-control" id="inputSense free space" ngModel name="Sense free space" required>
+                <option value="False">False</option>
+                <option value="True">True</option>
+                
+
+                
+                
+            </select>
+     </div>
+    
+<div>
+    <hr>
+    <label for="Direction"><b> Direction</b></label>
+    <select type="Direction" class="form-control"  id="inputDirection" ngModel name="Direction" required>
+        <option value="Non">Non</option>
+        <option value="Left">Left</option>
+        <option value="Right">Right</option>
+        <option value="Forword">Forword</option>
+        <option value="Back">Back</option>
+                        
+                        
+    </select>
+</div>
+<div>  
+    <hr>
+    <label for="Moter"><b> Moter</b></label>
+    <select type="Moter" class="form-control" id="inputMoter" ngModel name="Moter" required>
+        <option value="On">On</option>
+        <option value="Off">Off</option>
+        
+        
+                        
+                        
+    </select>
+</div>
+<div>
+    <hr>
+
+    
+  <label for="Battery"><b>Battery</b></label>
+  <input type="number" placeholder="Enter Battery"   name="Battery" 
+  min="0" max="100" class="form-control" id="inputBttery" ngModel name="Battery" required>
+                
+</div>
+<div>
+    <hr>
+  <label for="Angle"><b>Angle</b></label>
+  <input type="number" placeholder="Enter Angle" 
+  name="Angle" min="30" max="160" class="form-control" id="inputAngle" ngModel name="Angle" required>
+</div>
+<div>
+    <hr>
+  <label for="Speed"><b>Speed</b></label>
+  <input type="number" placeholder="Enter Speed"
+   name="Speed" min="0" max="8" class="form-control" id="inputSpeed" ngModel name="Speed" required>
+</div>  
+
+<div class ="form-row"> 
+    <div calss="form-group col-md-6">
+    <label for="get_id">id</label>
+    <input type ="text"  name ="id" class="form-control"   #id_val = "ngModel"   ngModel name ="id"  required>  
+    
+  </div> 
+</div>  
+
+<button (click)="updateDocument(contactForm)" >update</button>
+<button (click)="addNewDocumentWithSpecificID(contactForm)">add chair</button>  
+
+
+<button (click)="reset_form(contactForm)">reset</button>  
+ 
+</form> 

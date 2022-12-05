@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "wheelchair-trials": {
+      "hosting": {
+        "myapp1": [
+          "wheelchair-trials"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "wheelchair-trials"
+  }
+}

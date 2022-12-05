@@ -1,0 +1,89 @@
+<!--<button  type="button"  (click)="hey()">Show</button>  
+<h3><b>wheel chair state</b></h3>
+
+<div *ngFor="let chair of all_Chairs  ">  
+        <div *ngIf="(chair.id=='chair 0')">
+            <p>state : {{chair.State}}</p>  
+            
+            <p>obstacle : {{chair.Obstacle}}</p>    
+            <p class ="errMsg" *ngIf="set_obestalce(chair.obstaclestate)"> &nbsp;&nbsp;&nbsp;!Take care from Obstacle </p>
+            
+    
+            <p>id : {{chair.id}}</p>
+           
+    
+        </div>  
+
+
+        <form   #contactForm ="ngForm"  > 
+
+
+    <div class ="header"> 
+        <h2>WheelChair</h2> 
+        <br>
+    </div> 
+
+
+            <div class ="form-row"> 
+                <div calss="form-group col-md-6">
+                <label for="id">Chair ID</label>
+                <input type ="text"  name ="id" class="form-control"   #id_val = "ngModel"   ngModel name ="id"  required>  
+                <p class ="errMsg" *ngIf="!id_val.valid  && id_val.touched">id is required</p>
+              </div>  
+                </div>  
+                <br> 
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-1 col-md-offset-2"> 
+                    <ul class="nav nav-tabs">  
+                        <button  type="button"  (click)="onSubmit(contactForm)">Show</button>  
+                    </ul> 
+                </div> 
+           
+
+        <button (click)="goToLink()">open dashboard</button>    
+      
+       
+      
+    </form> -->   
+    <div *ngFor="let chair of all_Chairs  ">  
+
+
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container bootstrap snippets bootdey">
+            <div class="row margin-bottom-10">
+               
+                
+               <div class="col-md-4 col-sm-12">
+                    <div class="servive-block servive-block-dark-blue">            
+                        <i class="icon-2x color-light fa fa-wheelchair"> 
+                         <p>{{chair.id}}</p>   
+                        <h6>State : {{chair.State}}</h6> 
+                        <h6>Battery : {{chair.Battery}}</h6>
+                       <h6>Direction : {{chair.Direction}}</h6> 
+                       <h6>Obstacle : {{chair.Obstacle}}</h6> 
+                       <h6>Angle : {{chair.Angle}}</h6> 
+                       <h6>Moter : {{chair.Moter}}</h6> 
+                       <h6>Speed : {{chair.Speed}}</h6> 
+                       
+
+
+
+                        </i>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+            
+            
+          
+        </div>     
+    
+           
+    </div> 
+    <!-- <p class ="errMsg" *ngIf="set_obestalce(chair.obstaclestate)"> &nbsp;&nbsp;&nbsp;!Take care from Obstacle </p>-->   
+
+   
+
+ 
+
